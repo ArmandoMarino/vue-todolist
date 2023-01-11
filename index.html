@@ -34,8 +34,8 @@
 
                 <!-- TO-DO LIST -->
                 <ul>
-                    <li v-for=" (task, i) in tasks " class="d-flex justify-content-between p-1">
-                        {{ task }}
+                    <li v-for=" (task, i) in tasks " class="d-flex justify-content-between p-1" @click="">
+                        {{ task.text }}
                         <button type="button" class="btn-close" aria-label="Close" @click="deleteTask(i)"></button>
                     </li>
                 </ul>

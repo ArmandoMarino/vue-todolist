@@ -5,12 +5,11 @@ const app = Vue.createApp({
     data() {
         return{
             tasks :[
-                'Fare i compiti',
-                'Fare la spesa',
-                'Fare il bucato'
+                { text: 'Fare i compiti', status: null },
+                { text: 'Fare la spesa', status: null },
+                { text: 'Fare il bucato', status: null },
             ],
             newTask : "",
-            done : true,
         }
     },
     methods:{
