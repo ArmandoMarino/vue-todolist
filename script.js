@@ -4,12 +4,13 @@ console.log(Vue + "Vue OK");
 const app = Vue.createApp({
     data() {
         return{
+            newTask : "",
             tasks :[
                 { text: 'Fare i compiti', status: null },
                 { text: 'Fare la spesa', status: null },
                 { text: 'Fare il bucato', status: null },
             ],
-            newTask : "",
+            
         }
     },
     methods:{
