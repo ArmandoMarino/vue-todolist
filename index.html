@@ -28,15 +28,15 @@
                 
                 <!-- ADD TASK -->
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Nuova Task" aria-label="Nuova Task" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Aggiungi</button>
+                    <input type="text" class="form-control" placeholder="Nuova Task" aria-label="Nuova Task" aria-describedby="button-addon2" v-model="newTask">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTask">Aggiungi</button>
                 </div>
 
                 <!-- TO-DO LIST -->
                 <ul>
                     <li v-for=" (task, i) in tasks " class="d-flex justify-content-between p-1">
                         {{ task }}
-                        <button type="button" class="btn-close" aria-label="Close"></button>
+                        <button type="button" class="btn-close" aria-label="Close" @click="deleteTask(i)"></button>
                     </li>
                 </ul>
 
