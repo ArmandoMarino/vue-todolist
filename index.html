@@ -28,8 +28,8 @@
                 
                 <!-- ADD TASK -->
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Nuova Task" aria-label="Nuova Task" aria-describedby="button-addon2" v-model="newTask">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTask">Aggiungi</button>
+                    <input type="text" class="form-control" placeholder="Nuova Task" aria-label="Nuova Task" aria-describedby="button-addon2" v-model="newTask" @keyup.enter="addTask">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2" @click="addTask" >Aggiungi</button>
                 </div>
 
                 <!-- TO-DO LIST -->
