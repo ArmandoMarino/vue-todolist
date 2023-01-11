@@ -6,16 +6,16 @@ const app = Vue.createApp({
         return{
             newTask : "",
             tasks :[
-                { text: 'Fare i compiti', status: null },
-                { text: 'Fare la spesa', status: null },
-                { text: 'Fare il bucato', status: null },
+                { text: 'Fare i compiti', done: false },
+                { text: 'Fare la spesa', done: false },
+                { text: 'Fare il bucato', done: false },
             ],
             
         }
     },
     methods:{
         addTask(){
-           this.tasks.push(this.newTask);
+           this.tasks.push({ text: this.newTask, done: false });
            this.clearInput(); 
         },
         deleteTask(index){
@@ -23,7 +23,10 @@ const app = Vue.createApp({
         },
         clearInput(){
             this.newTask = "";
-        }
+        },
+        setDone(index){
+            this.tasks[index].done = true;
+        },
     }
   });
   

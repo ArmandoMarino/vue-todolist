@@ -34,7 +34,7 @@
 
                 <!-- TO-DO LIST -->
                 <ul>
-                    <li v-for=" (task, i) in tasks " class="d-flex justify-content-between p-1" @click="">
+                    <li v-for=" (task, i) in tasks " class="d-flex justify-content-between p-1" :class="task.done ? 'text-lt' : '' " @click="setDone(i)">
                         {{ task.text }}
                         <button type="button" class="btn-close" aria-label="Close" @click="deleteTask(i)"></button>
                     </li>
