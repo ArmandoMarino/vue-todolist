@@ -7,7 +7,7 @@ const app = Vue.createApp({
             newTask : "",
             tasks :[
                 { text: 'Fare i compiti', done: false },
-                { text: 'Fare la spesa', done: false },
+                { text: 'Fare la spesa', done: true },
                 { text: 'Fare il bucato', done: false },
             ],
             
