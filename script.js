@@ -25,7 +25,7 @@ const app = Vue.createApp({
             this.newTask = "";
         },
         setDone(index){
-            this.tasks[index].done = true;
+            this.tasks[index].done = !this.tasks[index].done;
         },
     }
   });
